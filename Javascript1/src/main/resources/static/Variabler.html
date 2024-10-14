@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Variabler</title>
+  <script type="application/javascript">
+      // const, konstant streng som ikke skal forandres
+      const navn = "Line Jensen";
+      const alder = 23;
+      const myndig = true;
+      const hoyde = 1.80;
+
+      // let streng som kan forandres
+      // hva som skal skrives ut
+      let ut = navn + " " + alder;
+
+      // if setning for å validere om personen er myndig eller ikke
+      if(myndig){
+          ut += " er myndig ";
+      } else {
+          ut += " er ikke myndig ";
+      }
+      // videre melding som skrives ut
+      ut += " og har en høyde på " + hoyde;
+
+      // skrive ut på document
+      document.write(ut);
+      // skrive ut console log
+      console.log(ut);
+  </script>
+</head>
+<body>
+
+</body>
+</html>

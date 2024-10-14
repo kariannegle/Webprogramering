@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Oppgave3</title>
+  <script type="application/javascript">
+
+    // funksjon som leser data fra input for så å skrive det ut på en blank side
+    function melding(data){ // data er bare et valgt ord, du kan brukes hva som helst men det indikerer at det er dataene fra input feltet som skal skrives ut
+        data = data.fontcolor("red");
+        // skrive ut
+        document.write(data);
+        /*
+        // skrive ut med alert
+        alert(data);
+        // skrive ut på console.log
+        console.log(data)
+        */
+    }
+
+  </script>
+</head>
+<body>
+<label for="inn">Navn: </label>
+<input type="text" id="inn" onchange="melding(this.value);"/>
+</body>
+</html>
