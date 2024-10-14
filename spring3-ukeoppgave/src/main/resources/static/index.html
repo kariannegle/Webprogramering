@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <title>Motorvognregister</title>
+    <script src="index.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h1>Motorvognregister</h1>
+            <!-- form skjema start -->
+            <form class="form">
+                <!-- form gruppe -->
+                <div class="form-group">
+                    <label for="personnr">Personnr</label>
+                    <input type="text" class="form-control" id="personnr"/>
+                </div>
+                <div class="form-group">
+                    <label for="navn">Navn</label>
+                    <input type="text" class="form-control" id="navn"/>
+                </div>
+                <div class="form-group">
+                    <label for="adresse">Adresse</label>
+                    <input type="text" class="form-control" id="adresse"/>
+                </div>
+                <div class="form-group">
+                    <label for="kjennetegn">Kjennetegn</label>
+                    <input type="text" class="form-control" id="kjennetegn"/>
+                </div>
+                <!-- dropdown bil Merke -->
+                <div class="form-group">
+                    <label for="merke">Merke</label>
+                    <div id="merke" class="dropdown">
+
+                    </div>
+                </div>
+                <!-- dropdown bil Type, som spretter opp ette valgt bil Merke-->
+                <div class="form-group">
+                    <label for="type">Type</label>
+                    <div id="type" class="dropdown">
+
+                    </div>
+                </div>
+            </form>
+            <!-- form skjema slutt -->
+            <button class="btn btn-primary" onclick="regMotorvogn()">Registrer</button><br/>
+        </div>
+        <!-- skrive ut alle registrerte biler -->
+        <div class="col-md-8">
+            <h3>Alle bilene:</h3>
+            <div id="bilene" class="table-responsive"></div>
+            <!-- knapp for å slette alle registrerte biler -->
+            <button class="btn btn-danger" onclick="slettAlle()">Slett alle biler</button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
