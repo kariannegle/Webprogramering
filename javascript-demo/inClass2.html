@@ -1,0 +1,46 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            // algorithm for palindrom number
+            function getReverse(palindrom){
+                let a=0,b=0,c=0;
+                while(palindrom > 0){
+                    a = parseInt(palindrom%10);
+
+                    palindrom = parseInt(palindrom/10);
+                    c = parseInt(c*10) + a;
+                }
+                return c;
+
+            function resturnRes(){
+                let input = document.getElementById("palindrome").value;
+                if(getReverse(input) == input){
+                    alert(input + "is a palindromme");
+                }else{
+                    alert(input + "is NOT a palindromme");
+                }
+                
+            }
+        </script>
+
+        <input type="text" id="palindrome">
+        <button onclick="returnRes()">Click here</button>
+
+        <script>
+            const books = ["Dune","Eloquent Javascript","SUN Java Certification","lol","hei","objects"];
+
+            let htmlCode = "<ul>";
+                for(let i in books){
+                    htmlCode += "<li>"+books[i]+"</li>";
+                }
+                htmlCode+="</ul>";
+                document.write(htmlCode);
+
+
+
+        </script>
+    </body>
+</html>

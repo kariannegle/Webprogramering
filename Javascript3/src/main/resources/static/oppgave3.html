@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <!-- Lag en HTML-kalkulator med to inputfelt og fire knapper, en for hver av regneartene +, - ,* og /.
+Lag så JavaScript-kode som avhengig av hvilken knapp som er trykket viser resultatet av
+regnestykket. Det skal også valideres at inputfeltene bare kan inneholde tall (også dette i form
+av JavaScript-kode). Feilmeldinger skal også vises dersom det blir skrevet inn noe annet enn tall i
+inputboksene.  -->
+  <script type="application/javascript">
+    function pluss() {
+      let in_1 = parseFloat(document.getElementById("in_1").value);
+      let in_2 = parseFloat(document.getElementById("in_2").value);
+      let output = document.getElementById("kalk-output");
+      if(isNaN(in_1) || isNaN(in_2)) {
+        alert("Feil tallformat, prøv igjen.");
+      } else {
+        output.innerHTML = (in_1 + in_2).toString();
+      }
+    }
+
+    function minus() {
+      let in_1 = parseFloat(document.getElementById("in_1").value);
+      let in_2 = parseFloat(document.getElementById("in_2").value);
+      let output = document.getElementById("kalk-output");
+      if(isNaN(in_1) || isNaN(in_2)) {
+        alert("Feil tallformat, prøv igjen.");
+      } else {
+        output.innerHTML = (in_1 - in_2).toString();
+      }
+    }
+
+    function gange() {
+      let in_1 = parseFloat(document.getElementById("in_1").value);
+      let in_2 = parseFloat(document.getElementById("in_2").value);
+      let output = document.getElementById("kalk-output");
+      if(isNaN(in_1) || isNaN(in_2)){
+        alert("Feil tallformat, prøv igjen.");
+      } else {
+        output.innerHTML = (in_1 * in_2).toString;
+      }
+    }
+
+    function dele() {
+      let in_1 = parseFloat(document.getElementById("in_1").value);
+      let  in_2 = parseFloat(document.getElementById("in_2").value);
+      let output = document.getElementById("kalk-output");
+      if(isNaN(in_1) || isNaN(in_2)) {
+        alert("Feil tallformat, prøv igjen.");
+      } else {
+        output.innerHTML = (in_1 / in_2).toString();
+      }
+    }
+
+  </script>
+</head>
+<body>
+  <input id="in_1" type="number" value=""/>
+  <input id="in_2" type="number" value=""/>
+  <button onClick="pluss();">+</button>
+  <button onClick="minus();">-</button>
+  <button onClick="gange();">*</button>
+  <button onClick="dele();">/</button>
+  <div id="kalk-output"> </div>
+</body>
+</html>

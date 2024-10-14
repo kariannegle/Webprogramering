@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <!-- Utvid ukeoppgaven fra i forrige uke (personregister) med å ha mulighet for å lese inn persondataene via tekstbokser også legge disse objektene inn i arrayet. Dette skjer ved en ny knapp. Samme funksjonalitet for å vise arrayet (via egen knapp). -->
+  <script type="application/javascript">
+    const personRegister=[];
+    function visPersonRegister(){
+      // skriv ut
+      let ut = "<table><tr>" +
+              "<th>Navn</th><th>Adresse</th><th>Telefonnr</th>" +
+              "</tr>";
+      for (let p of personRegister){
+        ut+="<tr>";
+        ut+="<td>"+p.navn+"</td><td>"+p.adresse+"</td><td>"+p.telefonnr+"</td>";
+        ut+="</tr>";
+      }
+      document.getElementById("personRegister").innerHTML=ut;
+    }
+    function registrer(){
+      const navn = document.getElementById("navn").value;
+      const adresse = document.getElementById("adresse").value;
+      const telefonnr = document.getElementById("telefonnr").value;
+
+      const person = {
+        navn : navn,
+        adresse : adresse,
+        telefonnr : telefonnr
+      };
+      personRegister.push(person);
+      //nullstill inputboksene
+      document.getElementById("navn").value="";
+      document.getElementById("adresse").value="";
+      document.getElementById("telefonnr").value="";
+      visPersonRegister()}
+  </script>
+</head>
+<body>
+<table>
+  <tr><td>Navn</td><td><input type="text" id="navn"/></td></tr>
+  <tr><td>Adresse</td><td><input type="text" id="adresse"/></td></tr>
+  <tr><td>Telefonnr</td><td><input type="text" id="telefonnr"/></td></tr>
+  <tr><td><button onclick="registrer()">Registrer</button></td></tr>
+</table>
+<div id="personRegister"></div>
+</body>
+</html>
