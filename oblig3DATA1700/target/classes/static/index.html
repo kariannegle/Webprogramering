@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Kinobilletter Oblig 2</title>
+    <script src="index.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h1>Kinobilletter</h1>
+
+            <table id="skjema">
+                <tr>
+                    <td>Film:</td>
+                    <td>
+                        <!-- Drop down for å kunne velge en kinofilm -->
+                        <select class="form-control" id="velgFilm">
+                            <option>Velg film her</option>
+                            <option>Everything Everywhere All At Once</option>
+                            <option>Parasite</option>
+                            <option>Train To Busan</option>
+                            <option>The Farewell</option>
+                        </select>
+                    </td>
+                </tr>
+                <!-- input for antall billetter i skjema -->
+                <tr>
+                    <td>Antall billetter:</td>
+                    <td><input class="form-control" type="number" min="1" id="antall"></td>
+                    <!-- for errormelding -->
+                    <td id="antall-error" style="color:red"></td>
+                </tr>
+
+                <tr><td><br /></td><td></td></tr>
+
+                <!-- input felter i skjema -->
+                <tr>
+                    <td>Fornavn:</td>
+                    <td><input class="form-control" type="text" id="fornavn"></td>
+                    <td id="fornavn-error" style="color:red"></td>
+                </tr>
+                <tr>
+                    <td>Etternavn:</td>
+                    <td><input class="form-control" type="text" id="etternavn"></td>
+                    <td id="etternavn-error" style="color:red"></td>
+                </tr>
+                <tr>
+                    <td>Telefonnr:</td>
+                    <td><input class="form-control" type="text" id="telefonnr"></td>
+                    <td id="telefonnr-error" style="color:red"></td>
+                </tr>
+                <tr>
+                    <td>Epost:</td>
+                    <td><input class="form-control" type="text" id="epost"></td>
+                    <td id="epost-error" style="color:red"></td>
+                </tr>
+            </table>
+
+            <br/><br/>
+            <!-- knapp for å kjøpe billett og sende inn skjema, kaller på kjøpBillett function i javascript -->
+            <button class="btn btn-success btn-lg" onclick="kjopBillett()">Kjøp billett</button>
+        </div>
+
+        <!-- for å vise fram kjøpte billetter -->
+        <div class="col-md-9">
+            <h2>Alle billetter</h2>
+            <div id="skrivUtBilletter"></div>
+
+            <!-- knapp for å slette alle billettene, kaller på nullstill function -->
+            <button class="btn btn-danger" id="Nullstill" onclick="nullstill()">
+                Slett alle bestillingene</button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

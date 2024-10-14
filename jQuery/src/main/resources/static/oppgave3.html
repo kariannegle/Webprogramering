@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js">
+    </script>
+    <title>Title</title>
+  <script type="application/javascript">
+      function pluss() {
+        const inn_1 = Number($("#inn_1").val());
+        const inn_2 = Number($("#inn_2").val());
+        const output = $("#kalk-output");
+        if (inn_1 === "Nan" || inn_2 === "Nan") {
+          alert("Feil tallformat, prøv igjen");
+        }else{
+          output.html(inn_1 + inn_2);
+        }
+      }
+
+      function minus() {
+        const inn_1 = Number($("#inn_1").val());
+        const inn_2 = Number($("#inn_2").val());
+        const output = $("#kalk-output");
+        if (inn_1 === "Nan" || inn_2 === "Nan") {
+          alert("Feil tallformat, prøv igjen");
+        }else{
+          output.html(inn_1 - inn_2);
+        }
+      }
+
+      function gange() {
+        const inn_1 = Number($("#inn_1").val());
+        const inn_2 = Number($("#inn_2").val());
+        const output = $("#kalk-output");
+        if (inn_1 === "Nan" || inn_2 === "Nan") {
+          alert("Feil tallformat, prøv igjen");
+        }else{
+          output.html(inn_1 * inn_2);
+        }
+      }
+
+      function dele() {
+        const inn_1 = Number($("#inn_1").val());
+        const inn_2 = Number($("#inn_2").val());
+        const output = $("#kalk-output");
+        if (inn_1 === "Nan" || inn_2 === "Nan") {
+          alert("Feil tallformat, prøv igjen");
+        }else{
+          output.html(inn_1 / inn_2);
+        }
+      }
+  </script>
+</head>
+<body>
+<h2>Oppgave 3</h2>
+  <input id="inn_1" type="text" value=""/>
+  <input id="inn_2" type="text" value=""/>
+    <button id="pluss" onclick="pluss()">+</button>
+    <button id="minus" onclick="minus()">-</button>
+    <button id="gange" onclick="gange()">*</button>
+    <button id="dele" onclick="dele()">/</button>
+  Svar: <div id="kalk-output"> </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js">
+    </script>
+    <title>Title</title>
+</head>
+<body>
+<label for="inn">Navn</label>
+<!-- en input-box trenger en label ellers feilmeling -->
+<input type="text" id="inn"/>
+<button id="knapp" onclick="visMelding()">Vis melding</button>
+<div id="navn">ut</div>
+<div id="melding">ut</div>
+
+<script type="application/javascript">
+$(function(){
+    $('#knapp').click(function (){
+        $('#melding').html("<h2>Hallo!</h2>");
+    });
+
+    $('#inn').change(function (){
+        let navnet = $('#inn').val();
+        $('#navn').text(navnet);
+    })
+})
+
+
+</script>
+</body>
+</html>

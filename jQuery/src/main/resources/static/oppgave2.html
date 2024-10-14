@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js">
+    </script>
+    <title>Title</title>
+  <script type="application/javascript">
+    function fahrenheitToCelsius() {
+      const c = (5/9) * (Number($('#fahrenheit').val()) - 32);
+      const el = $("#celsius");
+      el.val(c);
+    }
+
+    function celsiusToFahrenheit() {
+      const f = (9/5) * Number($('#celsius').val()) + 32;
+      const el = $("#fahrenheit");
+      el.val(f);
+    }
+  </script>
+</head>
+<body>
+<h2>Oppgave 2</h2>
+Fahrenheit: <input id="fahrenheit" type="text" onchange="fahrenheitToCelsius()" value=""/>
+
+Celsius: <input id="celsius" type="text" onchange="celsiusToFahrenheit()" value=""/>
+
+</body>
+</html>

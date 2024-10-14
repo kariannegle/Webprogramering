@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js">
+    </script>
+    <title>Title</title>
+</head>
+<body>
+
+<div id="id1">
+  Hei
+</div>
+
+<script type="application/javascript">
+  $(function(){
+    $('#id1').click(function() {
+      $('#id1').html('Hopp');
+    })
+    $(document).ready(function(){
+      $('#id1').click(function(){
+        $('#id1').html('hopp');
+      })
+    })
+  })
+</script>
+
+</body>
+</html>
